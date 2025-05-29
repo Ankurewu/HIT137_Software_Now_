@@ -1,65 +1,45 @@
-# HIT137_Software_Now_
-This repository is created for 'Assignment 3' of the HIT137 Software Now unit.
-# Forest Guardian & Premium Image Editor
+# Premium Image Editor & Forest Guardian
 
-This repository contains two Python applications demonstrating GUI and game development skills:
+This repository contains two Python applications showcasing GUI and game development:
 
-1. **Forest Guardian**: A side-scrolling action game built with Pygame.
-2. **Premium Image Editor**: A Tkinter-based image editor with modern styling and common editing tools.
+1. **Premium Image Editor (Tkinter + OpenCV)**
+2. **Forest Guardian (Pygame)**
 
 ---
 
-## 1. Forest Guardian (Pygame)
+## 1. Premium Image Editor (Tkinter + OpenCV)
 
-**Overview**: Guide your stick-figure hero through three levels of platforming action. Defeat enemies, collect health pickups, and face off against a boss in the final stage.
+A lightweight, modern image editing tool with a dark theme and common photo operations.
 
-**Features**:
+### Features
 
-* Smooth camera that follows the player with lerp-based smoothing
-* Platform collisions, wrap-around world
-* Player projectiles with muzzle-flash and explosion particles
-* Health, lives, and scoring system (50 points per minion, 200 for boss)
-* Level progression: spawn increasingly challenging enemies, culminates in a boss encounter
-* HUD displaying score and lives, with a “Boss Incoming!” alert in level 3
-* Game over screen and restart (press R)
+* Load and save PNG & JPEG images
+* Undo/redo (up to 20 steps)
+* Crop by click-and-drag on the canvas
+* Zoom controls (slider & spinbox from 10% to 200%)
+* Automatic fit-to-window on load
+* Image operations:
 
-**Dependencies**:
+  * Rotate 90°
+  * Flip horizontally/vertically
+  * Gaussian blur
+  * Grayscale conversion
+  * Color inversion
+  * Sharpen filter
+  * Brighten & darken adjustments
+* Keyboard shortcuts (e.g., Ctrl+O to load, Ctrl+S to save, Ctrl+Z/Y to undo/redo)
+* Status bar for action feedback
+* Premium dark theme via ttk Styles
 
-* Python 3.8+
-* Pygame 2.x
+### Dependencies
 
-**Run**:
-
-```bash
-python forest_guardian.py
-```
-
----
-
-## 2. Premium Image Editor (Tkinter + OpenCV)
-
-**Overview**: A lightweight photo editor featuring load/save, undo/redo, cropping, resizing, and filters—all wrapped in a dark, modern interface.
-
-**Features**:
-
-* Load/save PNG & JPEG images
-* Undo/redo history (up to 20 steps)
-* Crop by click-and-drag on canvas
-* Zoom slider and spinbox (10%–200%) with fit-to-window on load
-* Operations: Rotate 90°, Flip H/V, Blur, Grayscale, Invert, Sharpen, Brighten/Darken
-* Keyboard shortcuts (e.g. Ctrl+O to load, Ctrl+S to save, Ctrl+Z/Y to undo/redo)
-* Status bar for operation feedback
-* Premium dark theme using ttk Styles
-
-**Dependencies**:
-
-* Python 3.8+
-* tkinter (built-in)
+* Python 3.8 or newer
+* tkinter (built‑in)
 * Pillow
 * OpenCV (cv2)
 * numpy
 
-**Run**:
+### Run
 
 ```bash
 python image_editor.py
@@ -67,26 +47,57 @@ python image_editor.py
 
 ---
 
+## 2. Forest Guardian (Pygame)
+
+A side-scrolling action-platformer where you guide a stick-figure hero through three levels and face a boss.
+
+### Features
+
+* Smooth camera following with interpolation
+* Platform collision and wrap-around world
+* Player shooting with muzzle-flash and explosion particles
+* Health, lives, and scoring system (50 pts per minion, 200 pts for boss)
+* Three levels of enemy waves, culminating in a boss fight
+* HUD displaying score and lives
+* "Boss Incoming!" alert in level 3
+* Game over screen and restart (press R)
+
+### Dependencies
+
+* Python 3.8 or newer
+* Pygame 2.x
+
+### Run
+
+```bash
+python forest_guardian.py
+```
+
+---
+
 ## Installation
 
-1. Clone this repository:
+1. **Clone** the repository:
 
    ```bash
    ```
 
-git clone [https://github.com/yourusername/forest-and-editor.git](https://github.com/yourusername/forest-and-editor.git)
-cd forest-and-editor
+git clone [https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git)
+cd your-repo
 
 ````
 
-2. Create and activate a virtual environment:
+2. **Create** and **activate** a virtual environment:
+
    ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\\Scripts\\activate  # Windows
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
 ````
 
-3. Install dependencies:
+3. **Install** dependencies:
 
    ```bash
    ```
@@ -95,7 +106,7 @@ pip install -r requirements.txt
 
 ```
 
-4. Run either application as shown above.
+4. **Run** the desired application as shown above.
 
 ---
 
@@ -103,17 +114,13 @@ pip install -r requirements.txt
 
 ```
 
-forest-and-editor/
-├── forest\_guardian.py   # Pygame action game
-├── image\_editor.py      # Tkinter-based image editor
-├── README.md            # This file
-├── requirements.txt     # pip dependencies
-└── assets/              # (Optional) images, icons, etc.
+├── image\_editor.py       # Premium Image Editor application
+├── forest\_guardian.py    # Forest Guardian game
+├── README.md             # Project overview and instructions
+├── requirements.txt      # Python dependencies
+└── assets/               # Optional assets (icons, images)
 
 ```
-
----
-
 
 *Happy coding!*
 
